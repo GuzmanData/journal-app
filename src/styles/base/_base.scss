@@ -32,3 +32,11 @@ main {
 .pointer {
     cursor: pointer;
 }
+
+.container-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
