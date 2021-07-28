@@ -14,8 +14,8 @@ export const RegisterScreen = () => {
     const { msgError } = useSelector(state => state.ui)
 
     const [formValues, handleInputChange] = useForm({
-        name: 'Carlos',
-        email: 'carlos2@gmail.com',
+        name: 'Test User',
+        email: 'testuser@gmail.com',
         password: '12345678',
         password2: '12345678'
     });
@@ -24,7 +24,6 @@ export const RegisterScreen = () => {
 
     const handleRegister = (e) => {
         e.preventDefault();
-        console.log(name, email, password, password2);
 
         if (isFormaValid()) {
          dispatch(startRegisterWithEmailPasswordName(email, password, name));
