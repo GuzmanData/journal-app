@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 
 import { useForm } from '../../hooks/useForm';
-import {  startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
+import { startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 
 export const LoginScreen = () => {
 
@@ -21,9 +21,7 @@ export const LoginScreen = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        // dispatch(login(12345, 'Carlos'));
         dispatch(startLoginEmailPassword(email, password));
-
     }
 
     const handleGoogleLogin = () => {
@@ -33,7 +31,10 @@ export const LoginScreen = () => {
     return (
         <>
             <h3 className="auth__title" >Login</h3>
-            <form onSubmit={handleLogin}>
+            <form
+                className="animate__animated animate__fadeIn animate__faster"
+                onSubmit={handleLogin}
+            >
 
                 <input
                     type="text"

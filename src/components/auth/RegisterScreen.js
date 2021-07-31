@@ -26,7 +26,7 @@ export const RegisterScreen = () => {
         e.preventDefault();
 
         if (isFormaValid()) {
-         dispatch(startRegisterWithEmailPasswordName(email, password, name));
+            dispatch(startRegisterWithEmailPasswordName(email, password, name));
         }
     }
 
@@ -52,7 +52,10 @@ export const RegisterScreen = () => {
     return (
         <>
             <h3 className="auth__title" >Register</h3>
-            <form onSubmit={handleRegister}>
+            <form
+                className="animate__animated animate__fadeIn animate__faster"
+                onSubmit={handleRegister}
+            >
                 {
                     msgError && (
 

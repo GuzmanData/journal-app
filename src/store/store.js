@@ -10,7 +10,7 @@ const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOO
 const reducers = combineReducers({
     auth: authReducers,
     ui: uiReducer,
-    notes: notesReducer
+    notes: notesReducer,
 });
 
 
