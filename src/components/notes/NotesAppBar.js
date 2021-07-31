@@ -1,9 +1,11 @@
 import React from 'react'
+import moment from "moment";
+
 import { useDispatch, useSelector } from 'react-redux'
 import { startSaveNote, startUpLoading } from '../../actions/notes';
 
 export const NotesAppBar = () => {
-
+    const toDay = moment(moment.now());
 
     const dispatch = useDispatch();
     const { active } = useSelector(state => state.notes)
@@ -17,9 +19,6 @@ export const NotesAppBar = () => {
     const handlePicture = () => {
 
         document.querySelector('#fileSelector').click();
-
-
-
     }
 
     const handleFileChange = (e) => {
@@ -27,21 +26,15 @@ export const NotesAppBar = () => {
 
         const file = e.target.files[0];
 
-        if(file) {
+        if (file) {
             dispatch(startUpLoading(file))
         }
-
-
     }
 
 
-
-
-    // https://api.cloudinary.com/v1_1/dvmpfgqrs
-
     return (
         <div className="notes__appbar">
-            <span>28 de agosto 2020</span>
+            <span> {toDay.format('LLL')} </span>
 
             <input
                 id="fileSelector"
