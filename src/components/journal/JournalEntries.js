@@ -9,7 +9,7 @@ export const JournalEntries = () => {
     return (
         <div className="jurnal__entries pointer">
             {
-                notes.map(note => (
+                notes?.map(note => (
                     <JournalEntry
                         key={note.id}
                         {...note}

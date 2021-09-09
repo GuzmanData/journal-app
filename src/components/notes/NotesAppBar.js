@@ -15,7 +15,7 @@ export const NotesAppBar = () => {
         dispatch(startSaveNote(active));
 
     }
-
+  
     const handlePicture = () => {
 
         document.querySelector('#fileSelector').click();
